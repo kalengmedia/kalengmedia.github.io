@@ -27,6 +27,7 @@ for(i = 0; i < myObj.LiveSignals.length; i++) {
   var x7 = "" + myObj.LiveSignals[i].pair + "";
   var x7 = x7.replace("/", "");
   z5.innerHTML = "" + x7 + "";
+  document.write("" + x7 + "");
   z.innerHTML = "" + myObj.LiveSignals[i].action + "";
   z1.innerHTML = "" + myObj.LiveSignals[i].entryPrice + "";
   z2.innerHTML = "" + myObj.LiveSignals[i].stopLoss + "";
@@ -43,7 +44,7 @@ for(i = 0; i < myObj.LiveSignals.length; i++) {
   y.appendChild(z4);
   x.appendChild(y);
   document.getElementById("myTable").appendChild(x);
-  document.write(x7);
+  
     
 }
       
