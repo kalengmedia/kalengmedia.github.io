@@ -10,7 +10,7 @@ $(document).ready(function(){
     $.ajax({url: "https://ru.aliexpress.com/glosearch/api/product?ltype=wholesale&trafficChannel=seo&seoChannel=wholesale&SearchText=blouses&d=y", success: function(result){
       var myObj = JSON.parse(JSON.stringify(result));
 	
-for(i = 0; i < items.length; i++) {
+for(i = 0; i < myObj.items.length; i++) {
     
 
   var x = document.createElement("TBODY");
@@ -25,10 +25,10 @@ for(i = 0; i < items.length; i++) {
 
   
   
-  z5.innerHTML = "" + items[i].title + "";
-  z.innerHTML = "==" + items[i].productId + "";
-  z1.innerHTML = "==" + items[i].price + "";
-  z2.innerHTML = "===" + items[i].imageUrl + "";
+  z5.innerHTML = "" + myObj.items[i].title + "";
+  z.innerHTML = "==" + myObj.items[i].productId + "";
+  z1.innerHTML = "==" + myObj.items[i].price + "";
+  z2.innerHTML = "===" + myObj.items[i].imageUrl + "";
   
 
 
